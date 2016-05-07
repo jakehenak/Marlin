@@ -1632,7 +1632,7 @@ static void setup_for_endstop_move() {
       destination[X_AXIS] = x;
       destination[Y_AXIS] = y;
       destination[Z_AXIS] = z;
-      prepare_move_raw(); // this will also set_current_to_destination
+      prepare_move_delta(destination); // this will also set_current_to_destination
       stepper.synchronize();
 
     #else
